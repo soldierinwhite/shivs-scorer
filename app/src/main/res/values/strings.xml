@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Shiv\'s Scorer</string>
+    <string name="new_match">New Match</string>
+    <string name="matches">Matches</string>
+
+    <string name="toss_label">Toss Coin!</string>
+    <string name="heads">Heads</string>
+    <string name="tails">Tails</string>
+    <string name="start_button">Play!</string>
+    <string name="teams_label">Teams</string>
+    <string name="batting_first_selection_label">Which team is batting first?</string>
+    <string name="team_1_hint">Team 1</string>
+    <string name="team_2_hint">Team 2</string>
+    <string name="over_limit_hint">Leave blank for unlimited</string>
+    <string name="over_limit_label">Over Limit Per Innings</string>
+    <string name="number_of_batsmen">Batsmen Per Team</string>
+    <string name="next_button">Next</string>
+
+    <string name="match_uri_extra">matchUri</string>
+    <string name="new_match_boolean_extra">isNew</string>
+    <string name="match_data_bundle">matchDataBundle</string>
+
+    <string name="no_data_found">Match not found in database.</string>
+</resources>

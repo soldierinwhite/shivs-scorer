@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/scorer_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/team_abbreviation"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/score_text_view"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/score_text_view"
+                app:layout_constraintTop_toTopOf="@+id/score_text_view"
+                tools:text="Sth" />
+
+            <TextView
+                android:id="@+id/score_text_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:textColor="@color/white"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toRightOf="@+id/team_abbreviation"
+                app:layout_constraintRight_toLeftOf="@+id/over_count"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="101/6" />
+
+            <TextView
+                android:id="@+id/target_text_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHorizontal_weight="2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Target: 213"
+                app:layout_constraintLeft_toRightOf="@+id/score_text_view"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/score_text_view"
+                app:layout_constraintBottom_toTopOf="@+id/over_count"
+                />
+
+            <TextView
+                android:id="@+id/over_count"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/score_text_view"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toRightOf="@+id/score_text_view"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/target_text_view"
+                tools:text="Ov: 20.3" />
+
+            <TextView
+                android:id="@+id/one_run"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="oneRun"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toTopOf="@+id/two_runs"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/dot_ball"
+                app:layout_constraintTop_toTopOf="@+id/dot_ball"
+                app:layout_constraintVertical_weight="1" />
+
+            <TextView
+                android:id="@+id/two_runs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="twoRuns"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dot_ball"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/dot_ball"
+                app:layout_constraintTop_toBottomOf="@+id/one_run"
+                app:layout_constraintVertical_weight="1" />
+
+            <TextView
+                android:id="@+id/dot_ball"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="dotBall"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="112sp"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toRightOf="@+id/one_run"
+                app:layout_constraintRight_toLeftOf="@+id/four_runs"
+                app:layout_constraintTop_toBottomOf="@+id/score_text_view" />
+
+            <TextView
+                android:id="@+id/four_runs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="fourRuns"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toTopOf="@+id/six_runs"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/dot_ball"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/dot_ball"
+                app:layout_constraintVertical_weight="1" />
+
+            <TextView
+                android:id="@+id/six_runs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="sixRuns"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="56sp"
+                app:layout_constraintBottom_toBottomOf="@+id/dot_ball"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@+id/four_runs"
+                app:layout_constraintRight_toRightOf="@+id/four_runs"
+                app:layout_constraintTop_toBottomOf="@+id/four_runs"
+                app:layout_constraintVertical_weight="1" />
+
+            <TextView
+                android:id="@+id/three_runs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="threeRuns"
+                android:text="3"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/wide"
+                app:layout_constraintTop_toBottomOf="@+id/dot_ball" />
+
+            <TextView
+                android:id="@+id/wide"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="wide"
+                android:text="WD"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/three_runs"
+                app:layout_constraintRight_toLeftOf="@+id/no_ball"
+                app:layout_constraintTop_toTopOf="@+id/three_runs" />
+
+            <TextView
+                android:id="@+id/no_ball"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="noBall"
+                android:text="NB"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/wide"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/three_runs" />
+
+            <TextView
+                android:id="@+id/leg_bye"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="legBye"
+                android:text="LB"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/bye"
+                app:layout_constraintTop_toBottomOf="@+id/wide" />
+
+            <TextView
+                android:id="@+id/bye"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="bye"
+                android:text="B"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/leg_bye"
+                app:layout_constraintRight_toLeftOf="@+id/wicket"
+                app:layout_constraintTop_toTopOf="@+id/leg_bye" />
+
+            <TextView
+                android:id="@+id/wicket"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:onClick="wicket"
+                android:text="W"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/bye"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/leg_bye" />
+
+            <TextView
+                android:id="@+id/misc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="..."
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:onClick="miscFragment"
+                app:layout_constraintLeft_toLeftOf="@+id/bye"
+                app:layout_constraintRight_toRightOf="@+id/bye"
+                app:layout_constraintTop_toBottomOf="@+id/bye"/>
+
+            <FrameLayout
+                android:id="@+id/misc_options_frame_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/misc"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

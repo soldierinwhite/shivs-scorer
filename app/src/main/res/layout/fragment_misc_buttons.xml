@@ -1,0 +1,182 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragmentBackground"
+    android:padding="16dp"
+    tools:context="io.github.soldierinwhite.cricketscorer.MiscButtonsFragment">
+
+    <TextView
+        android:id="@+id/abandon_match_text_view"
+        style="@style/ScorerButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingEnd="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingStart="8dp"
+        android:text="Abandon match" />
+
+    <TextView
+        android:id="@+id/penalty_runs_label"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingEnd="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingStart="8dp"
+        android:text="5 Penalty Runs: "
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/abandon_match_text_view"
+        app:layout_constraintRight_toRightOf="@id/abandon_match_text_view"
+        app:layout_constraintTop_toBottomOf="@id/abandon_match_text_view" />
+
+    <ImageView
+        android:id="@+id/penalty_runs_submit_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/btn_check_buttonless_on"
+        app:layout_constraintTop_toTopOf="@id/penalty_runs_label"
+        app:layout_constraintRight_toRightOf="@id/penalty_runs_label"/>
+
+    <TextView
+        android:id="@+id/awarded_to_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Awarded to:"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/penalty_runs_label"
+        app:layout_constraintTop_toBottomOf="@id/penalty_runs_label" />
+
+    <Spinner
+        android:id="@+id/awarded_to_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryLight"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/awarded_to_label"
+        app:layout_constraintLeft_toRightOf="@id/awarded_to_label"
+        app:layout_constraintRight_toRightOf="@id/abandon_match_text_view"
+        app:layout_constraintTop_toTopOf="@id/awarded_to_label" />
+
+    <TextView
+        android:id="@+id/short_run_label"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Short runs"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/abandon_match_text_view"
+        app:layout_constraintRight_toRightOf="@id/abandon_match_text_view"
+        app:layout_constraintTop_toBottomOf="@id/awarded_to_label" />
+
+    <ImageView
+        android:id="@+id/short_runs_submit_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/btn_check_buttonless_on"
+        app:layout_constraintTop_toTopOf="@id/short_run_label"
+        app:layout_constraintRight_toRightOf="@id/short_run_label"/>
+
+    <TextView
+        android:id="@+id/runs_docked_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Runs docked:"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/penalty_runs_label"
+        app:layout_constraintTop_toBottomOf="@id/short_run_label" />
+
+    <EditText
+        android:id="@+id/number_short_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="number"
+        android:hint="Edit here..."
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="@id/runs_docked_label"
+        app:layout_constraintLeft_toRightOf="@id/runs_docked_label"
+        app:layout_constraintRight_toRightOf="@id/abandon_match_text_view"
+        app:layout_constraintTop_toTopOf="@id/runs_docked_label"/>
+
+    <TextView
+        android:id="@+id/custom_runs_label"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Custom runs"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/abandon_match_text_view"
+        app:layout_constraintRight_toRightOf="@id/abandon_match_text_view"
+        app:layout_constraintTop_toBottomOf="@id/runs_docked_label" />
+
+    <ImageView
+        android:id="@+id/custom_runs_submit_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/btn_check_buttonless_on"
+        app:layout_constraintTop_toTopOf="@id/custom_runs_label"
+        app:layout_constraintRight_toRightOf="@id/custom_runs_label"/>
+
+    <TextView
+        android:id="@+id/runs_scored_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="4dp"
+        android:text="Runs scored:"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/penalty_runs_label"
+        app:layout_constraintTop_toBottomOf="@id/custom_runs_label" />
+
+    <EditText
+        android:id="@+id/custom_runs_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inputType="number"
+        android:hint="Edit here..."
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="@id/runs_scored_label"
+        app:layout_constraintLeft_toRightOf="@id/runs_scored_label"
+        app:layout_constraintRight_toRightOf="@id/abandon_match_text_view"
+        app:layout_constraintTop_toTopOf="@id/runs_scored_label"/>
+
+
+</android.support.constraint.ConstraintLayout>

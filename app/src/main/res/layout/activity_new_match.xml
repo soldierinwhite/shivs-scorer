@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Label -->
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:text="@string/teams_label" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/team_one_edit_text"
+                        style="@style/EditorFieldStyle"
+                        android:hint="@string/team_1_hint" />
+
+                    <EditText
+                        android:id="@+id/team_two_edit_text"
+                        style="@style/EditorFieldStyle"
+                        android:hint="@string/team_2_hint" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <!-- Label -->
+                <TextView
+                    style="@style/CategoryStyle"
+                    android:text="@string/over_limit_label" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+                    <EditText
+                        android:id="@+id/over_limit_edit_text"
+                        style="@style/EditorFieldStyle"
+                        android:hint="@string/over_limit_hint"
+                        android:inputType="number" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="16dp"
+                 android:orientation="horizontal">
+
+                 Label
+                 <TextView
+                     style="@style/CategoryStyle"
+                     android:text="@string/number_of_batsmen"/>
+                 <LinearLayout
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2"
+                     android:orientation="horizontal">
+                     <EditText
+                         style="@style/EditorFieldStyle"
+                         android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:hint="@string/team_1_hint"
+                         android:inputType="number"
+                         />
+                     <EditText
+                         style="@style/EditorFieldStyle"
+                         android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:layout_marginLeft="8dp"
+                         android:layout_marginStart="8dp"
+                         android:hint="@string/team_2_hint"
+                         android:inputType="number"
+                         />
+
+                 </LinearLayout>
+
+            </LinearLayout> -->
+
+            <Button
+                style="@style/ButtonStyle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                android:onClick="toss"
+                android:text="@string/next_button" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
